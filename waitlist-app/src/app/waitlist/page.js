@@ -26,7 +26,7 @@ const columns = [
   { name: "Service", id: "service", icon: <NumberIcon /> },
   { name: "Scheduled", id: "scheduled", icon: <Calendar /> },
 ];
-export function WaitList() {
+function WaitList() {
   const [visibleColumns, setVisibleColumns] = useState(
     columns.map((obj) => obj.id)
   );
