@@ -499,7 +499,7 @@ export const CloseIcon = () => {
     </>
   );
 };
-export const Link = () => {
+export const LinkIcon = () => {
   return (
     <>
       <svg
