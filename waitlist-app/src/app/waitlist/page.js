@@ -31,12 +31,10 @@ function WaitList() {
     columns.map((obj) => obj.id)
   );
   const [selectedUsers, setSelectedUsers] = useState([]);
-  const [selectAll, setSelectAll] = useState(false);
   const [tableFilter, setTableFilter] = useState(false);
   const [showFilterModal, setShowFilterModal] = useState(false);
 
   const handleSelectAll = (e) => {
-    setSelectAll(e.target.checked);
     setSelectedUsers(e.target.checked ? users.map((user) => user.id) : []);
   };
 

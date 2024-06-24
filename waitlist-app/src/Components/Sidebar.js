@@ -26,7 +26,7 @@ export default function Sidebar() {
   useEffect(() => {
     const checkMobile = () => {
       const isMobileDevice = navigator?.userAgentData?.mobile;
-      setIsMobile(!isMobileDevice);
+      setExpanded(!isMobileDevice);
     };
     if (typeof window !== "undefined") {
       checkMobile();
