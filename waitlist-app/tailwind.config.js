@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  mode: "jit", // Just-in-Time mode for faster build times (recommended)
   theme: {
     extend: {
       backgroundImage: {
