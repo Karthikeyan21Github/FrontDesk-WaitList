@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Toggle from "../app/constants/Icons/Toggle";
 import Logo from "../app/constants/Icons/Logo";
@@ -13,8 +13,8 @@ import {
 } from "../app/constants/Icons/SidebarIcons";
 import Link from "next/link";
 
-export default function Sidebar({ children }) {
-  const [expanded, setExpanded] = useState(!navigator?.userAgentData?.mobile);
+export default function Sidebar() {
+  const [expanded, setExpanded] = useState(true);
   const path = usePathname();
   const list = [
     { icon: <Orders />, text: "Orders", link: "/orders" },
@@ -22,6 +22,16 @@ export default function Sidebar({ children }) {
     { icon: <Calendar />, text: "Calendar", link: "/calendar" },
     { icon: <Waitlist />, text: "Waitlist", link: "/waitlist" },
   ];
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const isMobileDevice = navigator?.userAgentData?.mobile;
+      setIsMobile(!isMobileDevice);
+    };
+    if (typeof window !== "undefined") {
+      checkMobile();
+    }
+  }, []);
 
   return (
     <aside className="h-screen">
