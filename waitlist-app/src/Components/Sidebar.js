@@ -46,7 +46,7 @@ export default function Sidebar() {
             <Logo />
           </span>
           <span
-            className={`font-semibold text-xlscroll-smooth overflow -hidden transition-all ${
+            className={`font-semibold text-xl scroll-smooth overflow-hidden transition-all ${
               expanded ? "w-40 ml-3" : "w-0"
             }`}
           >
@@ -144,7 +144,7 @@ export default function Sidebar() {
           <div
             className={`
               flex justify-between items-center
-             scroll-smooth overflow -hidden transition-all ${
+             scroll-smooth overflow-hidden transition-all ${
                expanded ? "w-48 ml-3" : "w-0"
              }
           `}
@@ -170,7 +170,7 @@ export default function Sidebar() {
           <div
             className={`
               flex justify-between items-center
-             scroll-smooth overflow -hidden transition-all ${
+             scroll-smooth overflow-hidden transition-all ${
                expanded ? "w-40 ml-3 bg-white" : "w-0"
              }
           `}
@@ -239,7 +239,7 @@ export default function Sidebar() {
           <div
             className={`
               flex justify-between items-center cursor-pointer
-             scroll-smooth overflow -hidden transition-all ${
+             scroll-smooth overflow-hidden transition-all ${
                expanded ? "w-40 ml-3" : "w-0"
              }
           `}
