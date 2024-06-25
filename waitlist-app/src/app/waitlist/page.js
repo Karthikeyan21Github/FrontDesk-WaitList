@@ -46,7 +46,7 @@ function WaitList() {
   };
 
   const isSelected = (userId) => selectedUsers.includes(userId);
-  console.log(showFilterModal);
+
   return (
     <>
       <div className="font-medium text-2xl mt-4 ms-3">Waitlist</div>
@@ -74,6 +74,7 @@ function WaitList() {
                 setShowFilterModal(true);
               }}
             >
+              {/* clicking the button will enable the Modal */}
               <FilterIcon /> <span className="ms-2">Add Filter</span>
             </button>
           </div>
@@ -108,7 +109,7 @@ function WaitList() {
             </div>
           </div>
         </div>
-        <div className="overflow-auto border-[1px] rounded h-[77vh] mt-3">
+        <div className="overflow-auto scroll-smooth border-[1px] rounded h-[77vh] mt-3">
           <table className="w-full ">
             <thead>
               <tr className="bg-[#F8FAFC] border-b-[1px] border-[#E2E8F0]">
@@ -237,16 +238,16 @@ function WaitList() {
                 <path
                   d="M4.66663 10L7.99996 13.3333L11.3333 10"
                   stroke="#334155"
-                  stroke-width="0.666667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="0.666667"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M4.66663 6.00008L7.99996 2.66675L11.3333 6.00008"
                   stroke="#334155"
-                  stroke-width="0.666667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="0.666667"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </span>

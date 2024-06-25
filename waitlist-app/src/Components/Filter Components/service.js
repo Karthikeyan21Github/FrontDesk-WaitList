@@ -48,7 +48,6 @@ function Service() {
             peopleSearch={searchByName}
             searchResultLimit={10}
             placeholder={"Search By Name"}
-            onSelectionChange={null}
           />
         ) : (
           <FilterByTag />

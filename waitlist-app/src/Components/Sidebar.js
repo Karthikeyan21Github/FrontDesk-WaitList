@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Toggle from "../app/constants/Icons/Toggle";
 import Logo from "../app/constants/Icons/Logo";
@@ -46,7 +46,7 @@ export default function Sidebar() {
             <Logo />
           </span>
           <span
-            className={`font-semibold text-xl overflow-hidden transition-all ${
+            className={`font-semibold text-xlscroll-smooth overflow -hidden transition-all ${
               expanded ? "w-40 ml-3" : "w-0"
             }`}
           >
@@ -88,7 +88,7 @@ export default function Sidebar() {
                 } p-2 rounded-b-lg mx-2 flex justify-center shadow`}
               >
                 {expanded ? (
-                  <>
+                  <div>
                     <div className="flex items-center">
                       <span className="text-base font-semibold">08:30 AM</span>
                       <span className="ml-2 text-sm">Tue 20 Jan</span>
@@ -115,7 +115,7 @@ export default function Sidebar() {
                         />
                       </svg>
                     </div>
-                  </>
+                  </div>
                 ) : (
                   <GlobeIcon />
                 )}
@@ -144,12 +144,14 @@ export default function Sidebar() {
           <div
             className={`
               flex justify-between items-center
-              overflow-hidden transition-all ${expanded ? "w-48 ml-3" : "w-0"}
+             scroll-smooth overflow -hidden transition-all ${
+               expanded ? "w-48 ml-3" : "w-0"
+             }
           `}
           >
             <div className="leading-4 flex justify-between w-full">
               <span className="text-xs text-gray-600">DashBoard</span>
-              <a target="_blank" src="/dashBoard">
+              <a target="_blank" href="/dashBoard">
                 <LinkIcon />
               </a>
             </div>
@@ -168,9 +170,9 @@ export default function Sidebar() {
           <div
             className={`
               flex justify-between items-center
-              overflow-hidden transition-all ${
-                expanded ? "w-40 ml-3 bg-white" : "w-0"
-              }
+             scroll-smooth overflow -hidden transition-all ${
+               expanded ? "w-40 ml-3 bg-white" : "w-0"
+             }
           `}
           >
             <div className="leading-4">
@@ -207,24 +209,24 @@ export default function Sidebar() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_1_12438)">
+            <g clipPath="url(#clip0_1_12438)">
               <path
                 d="M8.00004 14.6666C11.6819 14.6666 14.6667 11.6818 14.6667 7.99992C14.6667 4.31802 11.6819 1.33325 8.00004 1.33325C4.31814 1.33325 1.33337 4.31802 1.33337 7.99992C1.33337 11.6818 4.31814 14.6666 8.00004 14.6666Z"
                 stroke="#475569"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M6.05994 6.00014C6.21667 5.55458 6.52604 5.17887 6.93324 4.93956C7.34044 4.70024 7.8192 4.61276 8.28472 4.69261C8.75024 4.77246 9.17248 5.01449 9.47665 5.37582C9.78083 5.73716 9.94731 6.19448 9.9466 6.6668C9.9466 8.00014 7.9466 8.6668 7.9466 8.6668"
                 stroke="#475569"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M8 11.3333H8.00667"
                 stroke="#475569"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </g>
             <defs>
@@ -237,7 +239,9 @@ export default function Sidebar() {
           <div
             className={`
               flex justify-between items-center cursor-pointer
-              overflow-hidden transition-all ${expanded ? "w-40 ml-3" : "w-0"}
+             scroll-smooth overflow -hidden transition-all ${
+               expanded ? "w-40 ml-3" : "w-0"
+             }
           `}
           >
             <div className="leading-4 ms-2">
