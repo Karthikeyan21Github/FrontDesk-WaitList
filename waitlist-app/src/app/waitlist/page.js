@@ -15,7 +15,6 @@ import {
 import FilterModal from "../../Components/FilterModal";
 import EditColumns from "../../Components/EditColumns";
 import { users } from "../constants/Variables/AppConstants";
-import Select from "../../Components/ReusableSelect";
 
 const columns = [
   { name: "Created On", id: "createdOn", icon: <Calendar /> },
@@ -50,7 +49,7 @@ function WaitList() {
   console.log(showFilterModal);
   return (
     <>
-      <div className="font-medium text-2xl ms-3">Waitlist</div>
+      <div className="font-medium text-2xl mt-4 ms-3">Waitlist</div>
       <div className="bg-white rounded-lg pt-2 px-4 font-raleway">
         <div className="flex w-full justify-around space-x-4 mb-4">
           <div className=" w-full p-2 h-[40px] border-[#64748B] border-[1px] rounded-lg">
@@ -109,7 +108,7 @@ function WaitList() {
             </div>
           </div>
         </div>
-        <div className="overflow-auto border-[1px] rounded h-[75vh] mt-3">
+        <div className="overflow-auto border-[1px] rounded h-[77vh] mt-3">
           <table className="w-full ">
             <thead>
               <tr className="bg-[#F8FAFC] border-b-[1px] border-[#E2E8F0]">

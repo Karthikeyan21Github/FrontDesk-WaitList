@@ -531,3 +531,73 @@ export const LinkIcon = () => {
     </>
   );
 };
+export const SwipeIcon = () => {
+  return (
+    <>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.3333 7.33333L13.9999 4.66667L11.3333 2"
+          stroke="#475569"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M14 4.66663H6"
+          stroke="#475569"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M4.66667 14L2 11.3333L4.66667 8.66663"
+          stroke="#475569"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M10 11.3334H2"
+          stroke="#475569"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </>
+  );
+};
+export const GlobeIcon = () => {
+  return (
+    <>
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 14 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.00004 12.4167C9.99158 12.4167 12.4167 9.99158 12.4167 7.00004C12.4167 4.0085 9.99158 1.58337 7.00004 1.58337C4.0085 1.58337 1.58337 4.0085 1.58337 7.00004C1.58337 9.99158 4.0085 12.4167 7.00004 12.4167Z"
+          stroke="#64748B"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M1.58337 7H12.4167"
+          stroke="#64748B"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7.00004 1.58337C8.3549 3.06665 9.12487 4.99156 9.16671 7.00004C9.12487 9.00852 8.3549 10.9334 7.00004 12.4167C5.64518 10.9334 4.87522 9.00852 4.83337 7.00004C4.87522 4.99156 5.64518 3.06665 7.00004 1.58337Z"
+          stroke="#64748B"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </>
+  );
+};
