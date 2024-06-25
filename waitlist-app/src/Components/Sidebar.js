@@ -10,6 +10,8 @@ import {
   Subscriptions,
   DashBoard,
   LinkIcon,
+  SwipeIcon,
+  GlobeIcon,
 } from "../app/constants/Icons/SidebarIcons";
 import Link from "next/link";
 
@@ -58,6 +60,68 @@ export default function Sidebar() {
               <Toggle />
             </button>
           )}
+        </div>
+        <div className={`${expanded ? "p-4" : "p-2 w-16"} cursor-pointer`}>
+          <div>
+            <div className="mb-2">
+              <div
+                className={`bg-white rounded-lg  shadow-sm text-sm text-[#334155] font-light ${
+                  expanded
+                    ? " flex justify-between items-center p-2"
+                    : "flex justify-center items-center h-[56px]"
+                }`}
+              >
+                {expanded ? (
+                  <>
+                    <span>Location Name</span>
+                    <SwipeIcon />
+                  </>
+                ) : (
+                  <div className="">
+                    <SwipeIcon />
+                  </div>
+                )}
+              </div>
+              <div
+                className={`${
+                  expanded ? "mx-4 ps-4 " : ""
+                } p-2 rounded-b-lg mx-2 flex justify-center shadow`}
+              >
+                {expanded ? (
+                  <>
+                    <div className="flex items-center">
+                      <span className="text-base font-semibold">08:30 AM</span>
+                      <span className="ml-2 text-sm">Tue 20 Jan</span>
+                    </div>
+                    <div className="text-gray-500 text-xs flex justify-between items-center">
+                      <span className="flex mt-1">
+                        <GlobeIcon />
+                        <span className="ms-2">UTC: +5 hours</span>
+                      </span>
+                      <svg
+                        className={`w-4 h-4 text-gray-700 transition-transform transform`}
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 7.5L10 12.5L15 7.5"
+                          stroke="#71717A"
+                          strokeWidth="1.67"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </>
+                ) : (
+                  <GlobeIcon />
+                )}
+              </div>
+            </div>
+          </div>
         </div>
         <ul className="flex-1 px-3">
           {list.map((obj, index) => (
