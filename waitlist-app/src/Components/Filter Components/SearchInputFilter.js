@@ -3,7 +3,6 @@ import { Search, CloseIcon } from "../../app/constants/Icons/SidebarIcons";
 function SearchInputFilter({
   peopleSearch,
   placeholder,
-  onSelectionChange,
   searchResultLimit = 10,
 }) {
   const [searchValue, setSearchValue] = useState("");
@@ -25,12 +24,8 @@ function SearchInputFilter({
     }
   }, [searchValue, peopleSearch, searchResultLimit]);
 
-  useEffect(() => {
-    // onSelectionChange(selectedList);
-  }, [selectedList, onSelectionChange]);
-
   return (
-    <div className="overflow-auto h-[326px]">
+    <div className="overflow-auto scroll-smooth h-[326px]">
       <div className="px-2 flex bg-[#F9FAFB] h-[28px] items-center border-[1px] border-[#E2E8F0] rounded-md ">
         <Search />
         <span className="flex justify-between items-center w-full">

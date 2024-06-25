@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <div className="flex">
           <Sidebar />
-          <div className="w-full overflow-x-auto bg-accent">
-            <div className="w-full flex justify-center mx-auto overflow-auto h-[calc(100vh)]">
+          <div className="w-full scroll-smooth overflow -x-auto bg-accent">
+            <div className="w-full flex justify-center mx-auto scroll-smooth overflow -auto h-[calc(100vh)]">
               <div className="w-full "> {children}</div>
             </div>
           </div>

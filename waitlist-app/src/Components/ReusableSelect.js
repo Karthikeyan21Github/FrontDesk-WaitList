@@ -48,7 +48,7 @@ const Select = ({ label, options, selectedOption, onOptionSelect }) => {
           </span>
         </button>
         {isOpen && (
-          <ul className="absolute max-h-[232px] overflow-auto w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+          <ul className="absolute max-h-[232px] scroll-smooth overflow -auto w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-10">
             {options.map((option) => (
               <li
                 key={option}

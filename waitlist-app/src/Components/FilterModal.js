@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Calendar,
   PeopleIcon,
@@ -18,7 +18,25 @@ function FilterModal(props) {
 
   const { showFilterModal, setShowFilterModal } = props;
   const [currentIndex, setCurrentIndex] = useState("schedule");
-  console.log("showFilterModal>>>", showFilterModal);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event?.key && event.key === "Escape") {
+        event.preventDefault();
+        setShowFilterModal(false);
+      }
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("keydown", handleKeyDown);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -35,10 +53,10 @@ function FilterModal(props) {
               aria-hidden="true"
             ></div>
 
-            <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div className="fixed inset-0 z-10 w-screen scroll-smooth overflow-y-auto shadow-lg">
               <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div className="rounded  relative transform  bg-white text-left shadow-xl transition-all">
-                  <div className="flex justify-between  border-b">
+                  <div className="flex justify-between border-b">
                     <aside className="rounded w-[230px] min-h-96 border-[1px] border-[#E2E8F0] border-b-0">
                       <nav className="h-full flex flex-col bg-white bg-[#F8FAFC]">
                         <div
@@ -81,7 +99,6 @@ function FilterModal(props) {
                             peopleSearch={peopleSearch}
                             searchResultLimit={10}
                             placeholder={"Search"}
-                            onSelectionChange={null}
                           />
                         ) : currentIndex === "service" ? (
                           <Service />
