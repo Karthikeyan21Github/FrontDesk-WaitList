@@ -2,9 +2,10 @@
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  mode: "jit", // Just-in-Time mode for faster build times (recommended)
   theme: {
     extend: {
       backgroundImage: {
