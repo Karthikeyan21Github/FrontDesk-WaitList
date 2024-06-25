@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const EditColumns = ({
   visibleColumns,
@@ -11,8 +11,25 @@ const EditColumns = ({
   const resetToDefault = () => {
     setVisibleColumns(columns.map((col) => col.id));
   };
-  console.log("open....", open);
-  console.count("Hello");
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event?.key && event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+      }
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("keydown", handleKeyDown);
+      }
+    };
+  }, []);
+
   return (
     <div
       className={`bg-white shadow-lg rounded-lg p-4 w-72 right-0 ease-linear ${
@@ -23,7 +40,7 @@ const EditColumns = ({
       <span className="font-light text-xs mb-1">
         Select the columns to rearrange
       </span>
-      <div className="overflow-auto h-[200px] mt-2">
+      <div className="overflow-auto scroll-smooth h-[200px] mt-2">
         {columns.map((column) => (
           <div key={column.id} className="flex items-center mb-2 relative">
             <input
